@@ -1,3 +1,13 @@
+:root {
+    --highlight-color: #0095f6;
+    --primary-background-color: #cdd5dd;
+    --secondary-background-color: #c4cad2;
+    --complimentary-color: #fff;
+    --border-color: #b4afbe;
+    --link-color: #0095f6;
+    --hightlight-component-color: #a0a0a0;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,8 +20,8 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background: rgb(205,213,221);
-    background: radial-gradient(circle, rgba(205,213,221,1) 11%, rgba(196,202,210,1) 96%);
+    background: var(--primary-background-color);
+    background: radial-gradient(circle, var(--primary-background-color) 11%, var(--secondary-background-color) 96%);
     padding: 0;
     display: flex;
     justify-content: center;
@@ -50,10 +60,10 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background-color: #fff;
+    background-color: var(--complimentary-color);
     width: 100%;
     padding: 1.3rem 0;
-    border: 1px solid lightgrey;
+    border: 1px solid var(--border-color);
 }
 
 .group:nth-child(1) {
@@ -75,4 +85,55 @@ body {
 .profile-photo img {
     height: 6rem;
     width: 6rem;
+}
+
+.instagram-login {
+    background-color: var(--highlight-color);
+    color: var(--complimentary-color);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instagram-logout {
+    color: var(--highlight-color);
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: var(--hightlight-component-color);
+}
+
+.link-blue {
+    color: var(--link-color);
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url('./images/applestore-button.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('./images/googleplay-button.png');
 }
